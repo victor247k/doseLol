@@ -48,6 +48,10 @@ body {
     background-color: var(--clr-700-dark);
     /* margin: 1rem; */
 }
+section {
+    min-height: 100vh;
+    align-items: center;
+}
 
 header {
     background-color: var(--clr-700-dark);
@@ -129,7 +133,6 @@ header {
 .login:focus, .login:hover {
     background-color: var(--clr-400-main);
     color: var(--clr-900-dark);
-    border: 0;
 }
 .register {
     color: var(--clr-700-dark);
@@ -153,24 +156,8 @@ header {
     position: relative;
     border-radius: 50%;
 }
-.burger-btn .line {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    border-radius: 10px;
-    width: 90%;
-    height: 5px;
-    background: var(--clr-100-text);
-    transform: scale(0.8) translateX(-60%) translateY(-3px);
-
-    transition: 150ms ease-in;
-}
-.burger-btn .line:nth-child(1) {
-    top: 25%;
-}
-.burger-btn .line:nth-child(3) {
-    top: 75%;
+.burger-btn i {
+    transform: scale(2) translateY(1px);
 }
 .burger-btn:hover, .burger-btn:focus {
     background-color: rgb(72, 72, 72);
@@ -329,6 +316,7 @@ header {
     display: flex;
     gap: 10rem;
     justify-content: flex-start;
+    flex-direction: row;
     overflow: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -426,11 +414,11 @@ header {
 /*  faq */
 
 .faq {
-    padding: 2rem 2rem 0;
+    padding: 2rem 2rem;
     margin-bottom: 0;
 }
 .qAndA {
-    margin: 2rem 0;
+    margin: 2rem auto;
     border-bottom: 1px solid var(--clr-700-accent);
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -438,6 +426,7 @@ header {
     place-items: center;
     width: 100%;
     padding-bottom: 0.5rem;
+    max-width: 600px;
 
 }
 .qAndA:focus {
@@ -486,6 +475,8 @@ header {
     padding: 0.5em;
     border-radius: 1rem;
     transition: 100ms;
+    max-width: 400px;
+    margin: 0 auto;
 }
 #CTA-btn:focus,
 #CTA-btn:hover {
@@ -496,7 +487,7 @@ header {
 
 footer {
     background-color: var(--clr-500-dark);
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -510,11 +501,11 @@ footer .container {
     background-color: var(--clr-900-dark);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 footer .container a img {
     border-radius: 1rem;
-    width: 150px;
+    width: 100px;
     transition: 0.15ms;
 }
 footer .container a img:focus,
@@ -572,4 +563,63 @@ footer .container a img:hover {
     place-content: center;
     grid-template-columns: repeat(3, 30px);
     row-gap: 10px;
+}
+
+@media (min-width: 768px) {
+    header , .header__links , .other__btns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+    .header__logo {
+        margin-right: 5rem;
+    }
+    .other__btns {
+        max-width: 300px;
+        margin: 0;
+    }
+    .burger-menu {
+        justify-content: space-around;
+        flex: 1;
+        margin-left: 5rem;
+    }
+    .header__links {
+        margin: 0;
+        justify-content: space-around;
+        max-width: 400px;
+    }
+    #burgerBtn {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hero {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 5rem;
+    }
+    .hero__image {
+        width: 50%;
+    }
+    .hero__text {
+        transform: scale(0.8);
+    }
+    .benefits {
+        justify-content: start;
+        padding: 0.5rem;
+        margin: 0;
+        gap: 0.5rem;
+    }
+    .benefit-line {
+        transform: scale(0.7);
+    }
+    .hero__title {
+        text-align: start;
+    }
 }

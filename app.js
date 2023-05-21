@@ -13,7 +13,11 @@ burgerBtn.addEventListener('click', function(){
     const header = document.querySelector('header');
     if (header.style.height === 'auto') {
         header.style.height = '75px';
+        burgerBtn.childNodes[1].classList.remove('fa-x');
+        burgerBtn.childNodes[1].classList.add('fa-bars');
         return
     }
+    burgerBtn.childNodes[1].classList.add('fa-x');
+    burgerBtn.childNodes[1].classList.remove('fa-bars');
     header.style.height = 'auto';
 });

@@ -12,7 +12,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <header id="top">
         <a href="index.html" target="_blank" class="header__logo">   
             <picture>
                 <img src="images/logo_clr.png" alt="logo_clr">
@@ -21,9 +21,7 @@
         </a>
         
         <button class="burger-btn" id="burgerBtn">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+            <i class="fa-solid fa-bars"></i>
         </button>
         <div class="burger-menu">  
             <div class="header__links">
@@ -46,17 +44,18 @@
             <div class="hero__text">
                 <h1 class="hero__title">Create Your Personalized Bio Link</h1>
                 <p class="hero__description">Unleash Your Creativity and Personalize Your Online Presence: Experience Unprecedented Control with Dose.lol, the Most Customizable Bio Link Solution on the Market.</p>
-            </div>
-            <div class="hero__action-btn">
-                <div class="userexample-btn">
-                    <label for="username-example">dose.lol/</label>
-                    <input id="username-example" type="text" placeholder="username">
+                <div class="hero__action-btn">
+                    <div class="userexample-btn">
+                        <label for="username-example">dose.lol/</label>
+                        <input id="username-example" type="text" placeholder="username">
+                    </div>
+                    <div class="action-btn">Get started</div>
                 </div>
-                <div class="action-btn">Get started</div>
+                <div class="social-proof">
+                    <p class="social-proof__text"><span class="social-proof__number">1000+</span> people already made their bio and liked it. <i class="fa-solid fa-thumbs-up"></i></p>
+                </div>
             </div>
-            <div class="social-proof">
-                <p class="social-proof__text"><span class="social-proof__number">1000+</span> people already made their bio and liked it. <i class="fa-solid fa-thumbs-up"></i></p>
-            </div>
+            
         </section>
 
         <section class="benefits">
@@ -138,7 +137,7 @@
         </section>
         <footer>
             <div class="container">
-                <a href="#hero"><img src="images/logo_clr_bg.png" alt="logo"></a>
+                <a href="#top"><img src="images/logo_clr_bg.png" alt="logo"></a>
                 <div class="pagesLinks">
                     <p class="pages-text">Pages</p>
                     <div class="links">
